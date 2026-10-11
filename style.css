@@ -1,0 +1,312 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fbfaff;
+  color: #1c1933;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar,
+.hero,
+.section,
+.footer-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Navigation bar */
+header {
+  position: sticky;
+  top: 0;
+  background: #fbfaff;
+  border-bottom: 1px solid #ece9f5;
+  z-index: 10;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo span,
+.hero h1 span,
+.about h2 span {
+  color: #7655e8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a:hover {
+  color: #7655e8;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+  min-height: 570px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.sub-title {
+  color: #7655e8;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 52px;
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.description {
+  max-width: 470px;
+  color: #747187;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  background: #7655e8;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #5d3cc9;
+}
+
+/* Decorative illustration */
+.hero-art {
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: radial-gradient(circle, #e8e0ff, transparent 70%);
+}
+
+.orb {
+  width: 250px;
+  height: 250px;
+  border-radius: 45% 55% 60% 40%;
+  background: linear-gradient(135deg, #c8b9ff, #7655e8, #4430a8);
+  box-shadow: 0 25px 60px #7655e844;
+  animation: float 5s infinite ease-in-out;
+}
+
+.floating-card {
+  position: absolute;
+  right: 0;
+  bottom: 45px;
+  padding: 14px 18px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px #21134a16;
+  font-weight: bold;
+}
+
+/* Services section */
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ece9f5;
+  border-radius: 18px;
+  padding: 28px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px #21134a10;
+}
+
+.card-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: #f0ebff;
+  color: #7655e8;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+.card p,
+.about p,
+.contact p {
+  color: #747187;
+}
+
+/* About section */
+.about {
+  background: #f0ecff;
+}
+
+.about .content {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Contact section */
+.contact {
+  text-align: center;
+}
+
+.contact p:not(.eyebrow) {
+  margin-bottom: 25px;
+}
+
+/* Footer */
+.footer {
+  background: #1c1933;
+  color: white;
+  padding: 25px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color: #c8b9ff;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Mobile responsive design */
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: #fbfaff;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .hero-art {
+    min-height: 290px;
+  }
+
+  .orb {
+    width: 210px;
+    height: 210px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
