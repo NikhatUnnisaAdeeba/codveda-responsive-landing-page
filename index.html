@@ -1,103 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nexora creates digital experiences.">
+
+  <meta name="description" content="Nexora creates beautiful and responsive digital experiences for businesses.">
+
   <title>Nexora | Digital Studio</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
+  <!-- Navigation Bar -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
+
       <a href="#home" class="logo">nexora<span>.</span></a>
 
       <button class="menu-toggle"
+              type="button"
               aria-label="Open menu"
-              aria-expanded="false">☰</button>
+              aria-expanded="false"
+              aria-controls="navLinks">
+        ☰
+      </button>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
+
+    <!-- Hero Section -->
     <section class="hero" id="home">
+
       <div class="hero-content">
+
         <p class="sub-title">CREATIVE THINKING. DIGITAL RESULTS.</p>
-        <h1>Ideas into impact.<br>
+
+        <h1>
+          Ideas into impact.<br>
           <span>Design your future.</span>
         </h1>
+
         <p class="description">
           We create beautiful and responsive websites
           that help businesses grow.
         </p>
+
         <a href="#contact" class="button">Start a project ↗</a>
+
       </div>
 
       <div class="hero-art" aria-hidden="true">
         <div class="orb"></div>
         <div class="floating-card">✦ Creative ideas</div>
       </div>
+
     </section>
 
+    <!-- Services Section -->
     <section class="section" id="services">
+
       <p class="sub-title">WHAT WE DO</p>
+
       <h2>Digital, done thoughtfully.</h2>
 
       <div class="cards">
+
         <article class="card">
-          <span class="card-icon">✳</span>
+          <span class="card-icon" aria-hidden="true">✳</span>
           <h3>Web Design</h3>
           <p>Simple and user-friendly website designs.</p>
         </article>
 
         <article class="card">
-          <span class="card-icon">⌘</span>
+          <span class="card-icon" aria-hidden="true">⌘</span>
           <h3>Development</h3>
           <p>Responsive websites built with web technologies.</p>
         </article>
 
         <article class="card">
-          <span class="card-icon">↗</span>
+          <span class="card-icon" aria-hidden="true">↗</span>
           <h3>Digital Strategy</h3>
           <p>Digital solutions that turn ideas into reality.</p>
         </article>
+
       </div>
+
     </section>
 
+    <!-- About Section -->
     <section class="about section" id="about">
+
       <div class="content">
+
         <p class="sub-title">ABOUT NEXORA</p>
-        <h2>Good ideas deserve <span>great execution.</span></h2>
+
+        <h2>
+          Good ideas deserve
+          <span>great execution.</span>
+        </h2>
+
         <p>
           We combine design, technology, and creativity
           to create useful digital experiences.
         </p>
+
       </div>
+
     </section>
 
+    <!-- Contact Section -->
     <section class="contact section" id="contact">
+
       <p class="sub-title">LET'S CONNECT</p>
+
       <h2>Have an idea? Let's build it.</h2>
+
       <p>We would love to hear about your project.</p>
+
       <a class="button" href="mailto:hello@example.com">
         Get in touch ↗
       </a>
+
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
+
     <div class="footer-content">
+
       <p>© <span id="year"></span> Nexora Studio. Built with care.</p>
+
       <a href="#home">Back to top ↑</a>
+
     </div>
+
   </footer>
 
 </body>
